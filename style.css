@@ -27,7 +27,7 @@ body {
   max-width: 420px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 22px;
   padding: 40px 28px;
   border: 2px solid var(--line);
   border-radius: 20px;
@@ -89,4 +89,34 @@ body {
   font-weight: 700;
   line-height: 1.5;
   letter-spacing: 0.03em;
+}
+
+/* 目的別のまとまり */
+.group { display: flex; flex-direction: column; gap: 8px; }
+
+.group-label {
+  margin: 0;
+  padding-left: 4px;
+  color: #666;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+/* 下段: X と Threads を横並びで小さめに */
+.sns-row { display: flex; gap: 12px; }
+
+.btn-sm {
+  flex: 1;
+  min-height: 52px;
+  font-size: 1.1rem;
+  border-radius: 14px;
+  box-shadow: 0 4px 0 var(--edge), 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+.btn-sm svg { width: 22px; height: 22px; }
+.btn-sm.btn-threads { font-size: 1.15rem; }
+.btn-sm:active,
+.btn-sm.is-pressed {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 var(--edge), inset 0 3px 6px rgba(0, 0, 0, 0.35);
 }
