@@ -11,8 +11,10 @@ body {
   min-height: 100vh;
   min-height: 100dvh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 24px;
   padding: 24px 16px;
   background: radial-gradient(circle at 30% 20%, #faf7f0, var(--bg));
   font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN",
@@ -77,3 +79,14 @@ body {
 
 /* 2行になるときは「小さな自分専用AI／製作記」の区切りで折り返す */
 .nw { display: inline-block; white-space: nowrap; }
+
+.site-title {
+  margin: 0;
+  max-width: 420px;
+  text-align: center;
+  color: #333;
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+}
