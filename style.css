@@ -1,0 +1,79 @@
+:root {
+  --bg: #f3efe6;
+  --line: #4a4a4a;
+}
+
+* { box-sizing: border-box; }
+
+html, body { margin: 0; }
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  background: radial-gradient(circle at 30% 20%, #faf7f0, var(--bg));
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN",
+               "Noto Sans JP", "Yu Gothic UI", "Meiryo", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px 28px;
+  border: 2px solid var(--line);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.btn {
+  --face: #333;
+  --edge: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 68px;
+  padding: 10px 16px;
+  text-align: center;
+  line-height: 1.35;
+  flex-wrap: wrap;
+  column-gap: 0.15em;
+  border-radius: 18px;
+  background: var(--face);
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  /* 下側の影でボタンに厚みを出す */
+  box-shadow: 0 6px 0 var(--edge), 0 8px 14px rgba(0, 0, 0, 0.18);
+  transform: translateY(0);
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+
+.btn svg { width: 30px; height: 30px; fill: currentColor; }
+
+/* 凹む */
+.btn:active,
+.btn.is-pressed {
+  transform: translateY(5px);
+  box-shadow: 0 1px 0 var(--edge), inset 0 3px 6px rgba(0, 0, 0, 0.35);
+}
+
+.btn:focus-visible { outline: 3px solid #f2b705; outline-offset: 3px; }
+
+.btn-x       { --face: #000000; --edge: #3a3a3a; }
+.btn-threads { --face: #101010; --edge: #555555; font-size: 1.6rem; }
+.btn-pc      { --face: #2563a8; --edge: #173f6d; }
+.btn-ai      { --face: #138a8a; --edge: #0b5757; }
+
+/* 2行になるときは「小さな自分専用AI／製作記」の区切りで折り返す */
+.nw { display: inline-block; white-space: nowrap; }
